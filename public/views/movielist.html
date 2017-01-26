@@ -1,3 +1,13 @@
 <div>
     This is the movie list view
+    
+    <ul>
+        <li ng-repeat="movie in movielist">
+        <a href="#!/{{movie._id}}"><h3>Title: {{movie.title}}</h3></a>
+        <p>Released: {{movie.releaseYear}}</p>
+        <p>Episode Number: {{movie.episode_number}}</p>
+        </li>
+    </ul>
+    
+    <a href="#!/add" class="button">Add Movie</a>
 </div>

@@ -1,4 +1,4 @@
-myApp.controller('AddMovieController', ['$scope', '$http', function ($scope, $http) {
+myApp.controller('AddMovieController', ['$scope', '$http', '$location', function ($scope, $http, $location) {
 
     $scope.addMovie = function () {
         var movie = {
@@ -6,12 +6,11 @@ myApp.controller('AddMovieController', ['$scope', '$http', function ($scope, $ht
             episode_number: $scope.episode_number,
             releaseYear: $scope.releaseYear
         }
-        console.log(movie);
         $http.post('http://localhost:3000/api/movies/add', movie).then(function (result) {
-            console.log("Added movie " + result);
+           console.log(result);   
         }).catch(function (err) {
             console.log(err);
         });
-
+    $location.path('/');
     }
 }]);

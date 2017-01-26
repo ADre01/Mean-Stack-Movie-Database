@@ -7,21 +7,21 @@ var myApp = angular.module('myApp', ['ngRoute', 'ngResource'])
         templateUrl: 'movielist.html',
         controller: 'MovieListController'
     }).
-    when('/:id', {
-        templateUrl: 'displayMovie.html',
-        controller: 'DisplayMovieController'
-    }).
     when('/add', {
         templateUrl: 'addMovie.html',
         controller: 'AddMovieController'
     }).
-    when('/delete/:id', {
-        templateUrl: 'deleteMovie.html',
-        controller: 'DeleteMovieController'
+    when('/:id', {
+        templateUrl: 'displayMovie.html',
+        controller: 'DisplayMovieController'
     }).
     when('/edit/:id', {
         templateUrl: 'editMovie.html',
         controller: 'EditMovieController'
+    }).
+    when('/delete/:id', {
+        templateUrl: 'deleteMovie.html',
+        controller: 'DeleteMovieController'
     }).
     otherwise({
         redirectTo: '/'

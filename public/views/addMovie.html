@@ -1,8 +1,9 @@
 <div>
     <form>
-        <input type="text" placeholder="movie title" ng-model="title" name="title">
-        <input type="text" placeholder="episode_number" ng-model="episode_number" name="episode_number">
-        <input type="text" placeholder="Year" ng-model="releaseYear" name="releaseYear">
-        <button class="btn btn-default" ng-click="addMovie()" type="submit">Add</button>
+        <input type="text" placeholder="movie title" ng-model="title">
+        <input type="number" placeholder="episode_number" ng-model="episode_number">
+        <input type="number" placeholder="Year" ng-model="releaseYear">
+        <button class="button" ng-click="addMovie()" type="button">Add</button>
+        <a href="#!/" class="button">Back</a>
     </form>
 </div>
