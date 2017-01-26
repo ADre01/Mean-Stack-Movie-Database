@@ -1,0 +1,1 @@
+SET DEBUG=new-folder-(2):* & npm start
